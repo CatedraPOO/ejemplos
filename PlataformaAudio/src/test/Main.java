@@ -9,6 +9,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		System.out.println("POO music");
+		System.out.println("");
+		System.out.println("VERSION 1");
 		// Usamos una clase GeneradorRandom que se encarga de esa tarea, podria hacerse sin ella
 		ArrayList <Cancion> canciones = HelperDatosDePrueba.generarCanciones(5);
 		ArrayList <CapituloPodcast> capitulos = HelperDatosDePrueba.generarCapitulos(5);
@@ -26,9 +28,24 @@ public class Main {
 		HelperDatosDePrueba.imprimirRanking("AUDIOLIBROS", audiolibros);
 		HelperDatosDePrueba.imprimirRanking("GENERAL", sonidos);
 		
+		/* POLIMORFISO V2 */
+		System.out.println("");
+		System.out.println("VERSION 2");
+		ListaSonidos listaCanciones = HelperDatosDePruebaV2.generarCanciones(5);
+		ListaSonidos listaCapitulos = HelperDatosDePruebaV2.generarCapitulos(5);
+		ListaSonidos listaAudiolibros = HelperDatosDePruebaV2.generarAudiolibros(5);
+		ArrayList<Sonido> listaSonidos  = HelperDatosDePruebaV2.unificarListas(listaCanciones, listaCapitulos, listaAudiolibros);
+	
+		HelperDatosDePruebaV2.imprimirRanking("CANCIONES", listaCanciones);
+		HelperDatosDePruebaV2.imprimirRanking("CAPITULOS", listaCapitulos);
+		HelperDatosDePruebaV2.imprimirRanking("AUDIOLIBROS", listaAudiolibros);
+		HelperDatosDePruebaV2.imprimirRanking("GENERAL", listaSonidos);
 		
-		/* Sin embargo, tambien es valido armar cada ranking por separado */
-		/* Lo siguiente hace eso 
+		
+		/* Tambien es valido armar cada ranking por separado */
+		/* Lo siguiente hace eso*/
+		System.out.println("");
+		System.out.println("VERSION 3");
 		System.out.println("### TOP 3 CANCIONES ###");
 		for(int i=0; i<3 ; i++) {
 			System.out.println(canciones.get(i).getTitulo() + " " + canciones.get(i).getCantidadReproducciones());
@@ -47,7 +64,7 @@ public class Main {
 		System.out.println("### TOP 3 GENERAL ###");
 		for(int i=0; i<3 ; i++) {
 			System.out.println(sonidos.get(i).getTitulo() + " " + sonidos.get(i).getCantidadReproducciones());
-		}*/
+		}
 		
 		
 		

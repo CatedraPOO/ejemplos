@@ -5,11 +5,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
 
-public class HelperDatosDePruebaV2 {
+public class HelperDatos {
 	
 	
-	
-	public static ArrayList<Sonido> unificarListas(ListaSonidos canciones, ListaSonidos capitulos, ListaSonidos audiolibros){
+	public static ArrayList<Sonido> unificarListas(ArrayList<Sonido> canciones, ArrayList<Sonido> capitulos, ArrayList<Sonido> audiolibros){
 		// unificamos las tres listas en una sola de Sonidos
 		ArrayList<Sonido> sonidos = new ArrayList<Sonido>();
 		sonidos.addAll(canciones);
@@ -21,8 +20,8 @@ public class HelperDatosDePruebaV2 {
 		return sonidos;
 	}
 	
-	public static ListaSonidos generarCanciones(Integer cantidad){
-		ListaSonidos canciones = new ListaSonidos();
+	public static ArrayList<Sonido> generarCanciones(Integer cantidad){
+		ArrayList <Sonido> canciones = new ArrayList<Sonido>();
 		for(int i=1; i<= cantidad; i++) {
 			canciones.add( new Cancion(
 					"Cancion " + i,
@@ -39,8 +38,8 @@ public class HelperDatosDePruebaV2 {
 		
 		return canciones;
 	}
-	public static ListaSonidos generarCapitulos(Integer cantidad){
-		ListaSonidos capitulos = new ListaSonidos();
+	public static ArrayList<Sonido> generarCapitulos(Integer cantidad){
+		ArrayList <Sonido> capitulos = new ArrayList<Sonido>();
 		for(int i=1; i<= cantidad; i++) {
 			capitulos.add( new CapituloPodcast(
 					"Capitulo podcast " + i,
@@ -55,8 +54,10 @@ public class HelperDatosDePruebaV2 {
 		
 		return capitulos;
 	}
-	public static ListaSonidos generarAudiolibros(Integer cantidad){
-		ListaSonidos audiolibros = new ListaSonidos();
+	
+	
+	public static ArrayList<Sonido> generarAudiolibros(Integer cantidad){
+		ArrayList <Sonido> audiolibros = new ArrayList<Sonido>();
 		for(int i=1; i<= cantidad; i++) {
 			audiolibros.add( new Audiolibro(
 					"Audiolibro " + i,
@@ -77,4 +78,5 @@ public class HelperDatosDePruebaV2 {
 			System.out.println(sonidos.get(i).getTitulo() + " " + sonidos.get(i).getCantidadReproducciones());
 		}
 	}
+	
 }

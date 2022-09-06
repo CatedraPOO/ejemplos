@@ -9,27 +9,43 @@ public class Main {
 	
 	public static void main(String[] args) {
 		System.out.println("POO music");
-		System.out.println("");
-		System.out.println("VERSION 1");
-		// Usamos una clase GeneradorRandom que se encarga de esa tarea, podria hacerse sin ella
-		ArrayList <Cancion> canciones = HelperDatosDePrueba.generarCanciones(5);
-		ArrayList <CapituloPodcast> capitulos = HelperDatosDePrueba.generarCapitulos(5);
-		ArrayList <Audiolibro> audiolibros = HelperDatosDePrueba.generarAudiolibros(5);
 		
-		ArrayList<Sonido> sonidos  = HelperDatosDePrueba.unificarListas(canciones, capitulos, audiolibros);
+		ArrayList<Sonido> canciones = HelperDatos.generarCanciones(5);
+		ArrayList<Sonido> capitulos = HelperDatos.generarCapitulos(5);
+		ArrayList<Sonido> audiolibros = HelperDatos.generarAudiolibros(5);
+		ArrayList<Sonido> sonidos = HelperDatos.unificarListas(canciones,  capitulos, audiolibros);
+		
+		HelperDatos.imprimirRanking("Canciones", canciones);
+		HelperDatos.imprimirRanking("Capitulos", capitulos);
+		HelperDatos.imprimirRanking("Audiolibros", audiolibros);
+		HelperDatos.imprimirRanking("General", sonidos);
+	
+		
+	
+		
+		//System.out.println("");
+		//System.out.println("VERSION 1");
+		// Usamos una clase GeneradorRandom que se encarga de esa tarea, podria hacerse sin ella
+		//ArrayList <Cancion> canciones = HelperDatosDePrueba.generarCanciones(5);
+		//ArrayList <CapituloPodcast> capitulos = HelperDatosDePrueba.generarCapitulos(5);
+		//ArrayList <Audiolibro> audiolibros = HelperDatosDePrueba.generarAudiolibros(5);
+		
+		//ArrayList<Sonido> sonidos  = HelperDatosDePrueba.unificarListas(canciones, capitulos, audiolibros);
 		
 		/* Este ejemplo muestra una solución donde un solo metodo sabe imprimir cada ranking*/
 		
 		/* POLIMORFISMO
 		 * 4 Rankings que llaman al mismo con colecciones que tiene instancias de clases diferentes
 		 */
-		HelperDatosDePrueba.imprimirRanking("CANCIONES", canciones);
-		HelperDatosDePrueba.imprimirRanking("CAPITULOS", capitulos);
-		HelperDatosDePrueba.imprimirRanking("AUDIOLIBROS", audiolibros);
-		HelperDatosDePrueba.imprimirRanking("GENERAL", sonidos);
+		
+		//HelperDatosDePrueba.imprimirSonido(capitulos.get(0));
+		//HelperDatosDePrueba.imprimirRanking("CANCIONES", canciones);
+		//HelperDatosDePrueba.imprimirRanking("CAPITULOS", capitulos);
+		//HelperDatosDePrueba.imprimirRanking("AUDIOLIBROS", audiolibros);
+		//HelperDatosDePrueba.imprimirRanking("GENERAL", sonidos);
 		
 		/* POLIMORFISO V2 */
-		System.out.println("");
+		/*System.out.println("");
 		System.out.println("VERSION 2");
 		ListaSonidos listaCanciones = HelperDatosDePruebaV2.generarCanciones(5);
 		ListaSonidos listaCapitulos = HelperDatosDePruebaV2.generarCapitulos(5);
@@ -40,11 +56,11 @@ public class Main {
 		HelperDatosDePruebaV2.imprimirRanking("CAPITULOS", listaCapitulos);
 		HelperDatosDePruebaV2.imprimirRanking("AUDIOLIBROS", listaAudiolibros);
 		HelperDatosDePruebaV2.imprimirRanking("GENERAL", listaSonidos);
-		
+		*/
 		
 		/* Tambien es valido armar cada ranking por separado */
 		/* Lo siguiente hace eso*/
-		System.out.println("");
+		/*System.out.println("");
 		System.out.println("VERSION 3");
 		System.out.println("### TOP 3 CANCIONES ###");
 		for(int i=0; i<3 ; i++) {
@@ -64,9 +80,7 @@ public class Main {
 		System.out.println("### TOP 3 GENERAL ###");
 		for(int i=0; i<3 ; i++) {
 			System.out.println(sonidos.get(i).getTitulo() + " " + sonidos.get(i).getCantidadReproducciones());
-		}
-		
-		
+		}*/
 		
 		
 		

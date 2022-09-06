@@ -18,7 +18,9 @@ public class Cancion extends Sonido{
 		this.setLetra(letra);
 		this.setAñoPublicacion(añoPublicacion);
 	}
-	
+	public String getTitulo() {
+		return "11111" + titulo + "11111";
+	}
 	public String getNombreAlbum() {
 		return nombreAlbum;
 	}

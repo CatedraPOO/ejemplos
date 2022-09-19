@@ -5,6 +5,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
+
+/* Una clase de ayuda como esta no requiere ser instanciada, basta con definir sus metodos como static
+ * Por favor, si crean una clase de apoyo, no creen instancias de ellas solo para hacer uso de algun metodo
+ * Definan el metodo como static
+ * Y usenlo como se muestra en la clase Main
+ *  */
 public class SimuladorDatos {
 	//creo una sola instancia de random y la reutilizo, no tiene sentido crear una instancia nueva para cada dato random a generar
 	// al ser privada solo la uso dentro de esta clase

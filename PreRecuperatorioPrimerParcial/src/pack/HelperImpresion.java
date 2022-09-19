@@ -7,6 +7,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
 
+/* Una clase de ayuda como esta no requiere ser instanciada, basta con definir sus metodos como static
+ * Por favor, si crean una clase de apoyo, no creen instancias de ellas solo para hacer uso de algun metodo
+ * Definan el metodo como static
+ * Y usenlo como se muestra en la clase Main
+ *  */
 public class HelperImpresion {
 
 	public static void imprimirCaso1(Serie serie) {
